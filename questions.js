@@ -1,13 +1,49 @@
 var selectElementsStartingWithA = function(array) {
-    return 'Write your method here';
-}
+    var tab = [];
+    for(var i=0;i < array.length; i++){
+        var first_letter = array[i].charAt(0);
+        if(first_letter == 'a'){
+        	tab.push(array[i]);
+        	}
+        }
+        	return tab;
+    }
+    
+
 
 var selectElementsStartingWithVowel = function(array) {
-    return 'Write your method here';
-}
+	var tab = [];
+	var voyelle = ['a','e','i','o','u','y'];
+		for(var i=0;i<array.length;i++){
+			var test = array[i].toLowerCase();
+			var first_letter = test.charAt(0);
+			 for(var inc=0;inc<voyelle.length;inc++){
+			 	if(first_letter == voyelle[inc]){
+			 		tab.push(array[i]);
+			 	}
+			 }
+
+		}
+				return tab ; 
+
+    
+};
 
 var removeNullElements = function(array) {
-    return 'Write your method here';
+    var tablo = [];
+    var el = null;
+    var find = array.indexOf(el);	
+    while(find != -1){
+    	if(find = -1){
+    	tablo.push(find);
+    	}
+    	else{
+    	find = array.indexOf(el);	    
+   		}
+   	}
+
+    	
+        return tablo;
 }
 
 var removeNullAndFalseElements = function(array) {
