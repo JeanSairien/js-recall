@@ -17,7 +17,7 @@ var selectElementsStartingWithVowel = function(array) {
 		for(var i=0;i<array.length;i++){
 			var test = array[i].toLowerCase();
 			var first_letter = test.charAt(0);
-			 for(var inc=0;inc<voyelle.length;inc++){
+             for(var inc=0;inc<voyelle.length;inc++){
 			 	if(first_letter == voyelle[inc]){
 			 		tab.push(array[i]);
 			 	}
@@ -27,59 +27,110 @@ var selectElementsStartingWithVowel = function(array) {
 				return tab ; 
 
     
-};
+}
 
 var removeNullElements = function(array) {
-    var tablo = [];
-    var el = null;
-    var find = array.indexOf(el);	
-    while(find != -1){
-    	if(find = -1){
-    	tablo.push(find);
-    	}
-    	else{
-    	find = array.indexOf(el);	    
-   		}
-   	}
+    function selectElements(element){
+        return element !== null; 
+    }
 
-    	
-        return tablo;
-}
+    return array.filter(selectElements);}
+    /*var tab = [];
+    for(var i=0 ; i<array.length ; i++){
+    if(array[i] != null){
+        tab.push(array[i]);
+    }
+    return tab;
+   }
+}*/
+
+
 
 var removeNullAndFalseElements = function(array) {
-    return 'Write your method here';
+   function selectElements(element){
+        return element !== null && element !== false; 
+    }
+
+    return array.filter(selectElements);
 }
 
+   /*var tab =[];
+   for(var i=0;i<array.length;i++){
+    if(array[i] != null && typeof array[i] != "boolean"){
+        tab.push(array[i]);
+    }
+    return tab;
+   }
+}*/
+
 var reverseWordsInArray = function(array) {
-    return 'Write your method here';
+    var tab =[];
+    for (var i=0; i<array.length; i++){
+        var phrase = array[i].split("").reverse().join("");
+                tab.push(phrase);
+    }
+    return tab;
 }
 
 var everyPossiblePair = function(array) {
-    return 'Write your method here';
+    var tab = [];
+    for (var i=0; i<array.length-1; i++){
+        for (var k=i+1; k<array.length; k++){
+                var paire = [array[i],array[k]];
+                paire.sort();
+                tab.push(paire);
+             }
+    }
+    tab.sort();
+    return tab;
 }
-
 var allElementsExceptFirstThree = function(array) {
-    return 'Write your method here';
-}
+        array.splice(0, 3);
+        return array;  
+    }
 
 var addElementToBeginning = function(array, element) {
-    return 'Write your method here';
+    array.unshift(element);
+    return array;
 }
 
 var sortByLastLetter = function(array) {
-    return 'Write your method here';
+   return str.split("").reverse().join("");
+
+        res = array.map(reverseString);
+        return res.sort().map(reverseString);
 }
+        /*return array.map(reversestring).sort("").map(reversestring);*/
+    /*var tab = [];
+    for(var i=0;i<array.length;i++){
+        var w=(array[i].split().reverse().join());
+            tab.push(w); 
+    }
+    tab.sort();
+    for(var i=0;i<tab.lenght;i++){
+        tab[i]= (tab[i].split("").reverse().join(""));
+    }
+    return tab;}*/
+
 
 var getFirstHalf = function(string) {
-    return 'Write your method here';
+    var n = Math.ceil(string.length);
+    return  string.slice(0, n);
 }
 
 var makeNegative = function(number) {
-    return 'Write your method here';
+    return -Math.abs(n);
 }
 
 var numberOfPalindromes = function(array) {
-    return 'Write your method here';
+    var tab = [];
+   for (var i = 0; i < array.length; i++) {
+       
+       if (array[i] === array[i].split("").reverse().join("")) {
+           tab.push(array[i]);
+       }
+   }
+   return tab.length;
 }
 
 var shortestWord = function(array) {

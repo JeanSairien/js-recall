@@ -2,12 +2,12 @@
 
 describe('javascript-Recall', function() {
 
-    xit('selects elements starting with A', function() {
+    it('selects elements starting with A', function() {
         var result = selectElementsStartingWithA(['bananas', 'apples', 'pears', 'avocados']);
         expect(result).toEqual(['apples', 'avocados']);
     });
 
-    xit('selects elements starting with a vowel', function() {
+    it('selects elements starting with a vowel', function() {
         var result = selectElementsStartingWithVowel(['john', 'david', 'omar', 'fred', 'idris', 'angela']);
         expect(result).toEqual(['omar', 'idris', 'angela']);
     });
@@ -17,17 +17,17 @@ describe('javascript-Recall', function() {
         expect(result).toEqual(['a', 'b', false, 0]);
     });
 
-    xit('removes null and false values from an array', function() {
+    it('removes null and false values from an array', function() {
         var result = removeNullAndFalseElements(['a', 'b', null, null, false, 0]);
         expect(result).toEqual(['a', 'b', 0]);
     });
 
-    xit('reverses the letters of each element in an array', function() {
+    it('reverses the letters of each element in an array', function() {
         var result = reverseWordsInArray(['dog', 'monkey', 'elephant', 'kayak']);
         expect(result).toEqual(['god', 'yeknom', 'tnahpele', 'kayak']);
     });
 
-    xit('makes every possible pairing of students', function() {
+    it('makes every possible pairing of students', function() {
         var result = everyPossiblePair(['Jon', 'Tyrion', 'Daenerys']);
         // sorted alphabetically
         expect(result).toEqual([
@@ -37,22 +37,22 @@ describe('javascript-Recall', function() {
         ]);
     });
 
-    xit('takes all elements except the first 3', function() {
+    it('takes all elements except the first 3', function() {
         var result = allElementsExceptFirstThree([1, 2, 3, 4, 5, 6, 7, 8]);
         expect(result).toEqual([4, 5, 6, 7, 8]);
     });
 
-    xit('adds an element to the beginning of an array', function() {
+    it('adds an element to the beginning of an array', function() {
         var result = addElementToBeginning([2, 3, 4, 5], 1);
         expect(result).toEqual([1, 2, 3, 4, 5]);
     });
 
-    xit('sorts an array by the last letter of each word', function() {
+    it('sorts an array by the last letter of each word', function() {
         var result = sortByLastLetter(['Lannister', 'Stark', 'Greyjoy', 'Targaryen']);
         expect(result).toEqual(['Stark', 'Targaryen', 'Lannister', 'Greyjoy']);
     });
 
-    xit('gets the first half of a string', function() {
+    it('gets the first half of a string', function() {
         var resultOne = getFirstHalf('dragon');
         var resultTwo = getFirstHalf('snake');
 
@@ -60,7 +60,7 @@ describe('javascript-Recall', function() {
         expect(resultTwo).toEqual('sna');
     });
 
-    xit('makes numbers negative', function() {
+    it('makes numbers negative', function() {
         var resultOne = makeNegative(5);
         var resultTwo = makeNegative(-5);
 
@@ -68,7 +68,7 @@ describe('javascript-Recall', function() {
         expect(resultTwo).toEqual(-5);
     });
 
-    xxt('counts elements in an array that are palindromes', function() {
+    it('counts elements in an array that are palindromes', function() {
         var result = numberOfPalindromes(['kayak', 'noon', 'khaleesi', 'hodor', 'racecar', 'abcbc', 'abcba']);
         expect(result).toEqual(4);
     });
